@@ -1,0 +1,85 @@
+body{
+    background: #fff;
+}
+.search{
+    width: 25%;
+    height: 50px;
+    margin: auto;
+    border-radius: 5px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.search > input {
+    width: 50%;
+    margin-right: 5px;
+    height: 24px;
+    padding-left: 7px;
+    border: 1px solid white;
+    background: gray;
+    color: #ffff;
+    border-radius: 10px;
+    outline: none;
+}
+.search > #city-search-btn{
+    width: 80px;
+    height: 28px;
+    font-weight: bolder;
+    background: #f12b05;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+.search > input::placeholder{
+    color: white;
+    font-weight: bolder;
+}
+
+/* <-----------------------------------------------------> */
+/* Card CSS */
+
+.child{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin: auto;
+    border-radius: 10px;
+}
+.card{
+    box-sizing: border-box;
+    padding: 5px;
+    line-height: 7px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
+    background: #fff;
+}
+.card > .card-image{
+    width: 100%;
+}
+.card-image > img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.div-first{
+    display: flex;;
+    justify-content: space-between;
+}
+.div-first>.card-btn{
+    width: 90px;
+    height: 30px;
+    background: #f12b05;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.div-second > .logo-img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
