@@ -70,4 +70,7 @@ citySearchBtn.addEventListener("click",function(){
 })
 
 
+
 console.log("Vaishnav")
+
+

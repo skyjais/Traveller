@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signup.html" />
+    <script
+      src="https://kit.fontawesome.com/66dd96b05e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1>Login</h1>
+        <form action="">
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-user"></i>
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" placeholder="Password" />
+            </div>
+
+            <div class="btn-field">
+              <button type="button" id="btn"> Login</button>
+            </div>
+            <div class="link-field">
+              <p>
+                Don't have an account?
+                <a href="signup.html">Create an account</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    let userData = JSON.parse(localStorage.getItem("user-list")) || [];
+
+
+      console.log(userData);
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let loginData = [];
+
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      let flag = false;
+
+     let userD= userData.forEach((el) => {
+        if (email.value === el.email) {
+          if (password.value === el.password) {
+            flag = true;
+          }
+
+        } 
+      });
+
+      if (flag) {
+        alert("Login successful");
+        window.location.href = "sorryaccount.html";
+       
+       } 
+      else {
+        alert("Incorrect Email or Password");
+          email.style.color = "red";
+          email.value = "Incorrect Email";
+          password.value = "";
+      }
+    });
+  </script>
+</html>
