@@ -39,6 +39,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  
   border-bottom: 2px solid gray;
 }
 
@@ -68,8 +69,8 @@ nav .right .right1 a:hover {
 }
 
 nav .right .right1 a:nth-child(1) {
-  border-bottom: 5px solid white;
-  font-weight: bold;
+  /* border-bottom: 5px solid white; */
+  /* font-weight: bold; */
   font-size: larger;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;

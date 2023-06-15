@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+  margin: auto;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  
+  border-bottom: 1px solid rgb(214, 197, 197);
+  border-radius: 5px;
+}
+
+nav .left img {
+  width: 100%;
+  max-width: 200px;
+  margin-left: 100px;
+}
+
+nav .right {
+    width: 60%;
+  /* display: flex;
+  justify-content: center; */
+  
+  
+  /* border: 2px solid red; */
+  align-items: flex-end;
+  font-size: large;
+  margin-right: 20px
+}
+.right1 {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30px;
+    height: 40px;
+    padding-top: 10px;
+    /* margin-left: 100px; */
+}
+
+
+nav .right .right1 a {
+  /* margin-right: 20px; */
+  
+  color: white;
+  /* text-align: center; */
+
+ 
+  /* border: 3px solid blue; */
+  text-decoration: none;
+  /* font-family: 'Darumadrop One', cursive; */
+  font-size: larger;
+  margin-right: 30px;
+ 
+}
+
+
+
+
+nav .right .right1 a:hover {
+  border-bottom: 5px solid white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  
+}
+
+nav .right .right1 a:nth-child(1) {
+  /* border-bottom: 5px solid black; */
+  /* font-weight: bold; */
+  font-size: larger;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.head{
+    width: 100%;
+   
+   
+}
+
+.imgdiv{
+           width: 100%;
+            aspect-ratio: auto 400 / 200;
+            text-align: center;
+            margin: auto;
+            background-image: url("/image/landingPage1st.jpg");
+            background-size: cover;
+            background-position: right;
+}
+ 
+
+
+
+
+
+
+
+
+.heading {
+   /* position: absolute;
+     top: 50%;
+   right: 40%; */
+
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+} 
+
+.inpt {
+   position: absolute;
+     top: 60%;
+   right: 36%;
+width: 350px;
+height: 30px;
+border-radius: 10px;
+transition: flex-grow 0.3s ease;
+  flex-grow: 0;
+  transition: transform 0.9s ease;
+}  
+
+.btn{
+    position: absolute;
+     top: 67%;
+   right: 46%;
+   background-color: red;
+   color: white;
+   border-radius: 7px;
+   width: 100px;
+   height: 30px;
+   text-decoration: none;
+   transition: transform 0.9s ease;
+}
+
+.btn:hover{
+    /* width: 130px; */
+    transform: scaleX(1.2);
+    transition: transform 0.9s ease;
+   
+}
+.inpt:hover{
+    
+    /* width: 400px; */
+    transform: scaleX(1.2);
+    transition: transform 0.9s ease;
+}
+
+
+
+.faq-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      margin-top: 20px;
+      background-color: rgb(67, 161, 255);
+      color: white;
+      border-radius: 10px;
+    }
+
+    .faq {
+      margin-bottom: 20px;
+      background-color: rgb(67, 161, 255);
+      padding: 10px;
+      cursor: pointer;
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border-radius: 10px;
+    }
+
+    .faq:hover .answer {
+      max-height: 500px;
+    }
+
+    .question {
+     font-size: large;
+    }
+
+    .answer {
+      overflow: hidden;
+      transition: max-height 1.5s ease;
+      max-height: 0;
+    }
+
+    .faqHead{
+        height: 100px;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        background-color: whitesmoke;
+    }
+.faqHead h1{
+   padding-top: 30px;
+    text-align: center;
+   
+    /* background-color: aqua; */
+}
+
+#search-input {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid rgb(67, 161, 255);
+      border-radius: 7px;
+      width: 97%;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      
+    }
+
+    footer {
+  margin-top: 1%;
+  background: rgb(67, 161, 255);
+  color: white;
+  font-size: bold;
+  padding-top: 1px;
+}
+
+footer .email-subs {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+footer .email-subs input {
+  border-radius: 20px;
+  height: 50px;
+  width: 30%;
+  padding-left: 25px;
+  text-align: start;
+  border: none;
+}
+
+footer .email-subs input::placeholder {
+  color: rgb(67, 161, 255);
+  font-weight: bolder;
+  font-size: large;
+}
+
+footer .email-subs button {
+  height: 50px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(67, 161, 255);
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: larger;
+  cursor: pointer;
+}
+
+footer .fot-divs {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid white;
+  margin: 5% auto;
+}
+
+footer .fot-divs .fot-div1 {
+  margin-top: 15px;
+  text-align: justify;
+  width: 30%;
+  line-height: 4.5;
+  font-size: large;
+}
+
+footer .fot-divs .fot-div1 p {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+  line-height: 1.5;
+  margin-bottom: 50px
+}
+
+footer .fot-divs .fot-div1 p .icons {
+  font-size: 25px;
+}
+
+footer .fot-divs .fot-div1 p .icons1 {
+  font-size: 40px;
+}
+
+footer .fot-divs .fot-div1 img {
+  width: 100%;
+  max-width: 250px;
+}
+
+footer .fot-divs .fot-div2 {
+  text-align: justify;
+  font-size: large;
+  padding-left: 5%;
+  width: 20%;
+  line-height: 2.5;
+}
+
+footer .fot-divs .fot-div2 h2 {
+  font-size: 20px;
+}
+
+footer .fot-divs .fot-div2 p {
+  margin: 5px 0;
+}
+
+footer .fot-divs .fot-div2 p:first-child {
+  margin-top: 10px;
+}
+
+footer .follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: -5%;
+  padding: 20px;
+
+}
+
+footer .follow .folicon {
+  font-size: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <nav>
+        <div class="left">
+            <a href="index.html"><img src="./image/traveller log.png" alt=""></a>
+        </div>
+        <div class="right">
+            <div class="right1">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="">Location</a>
+                <a href="about.html">About Us</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="head">
+        <div class="imgdiv">
+            <nav>
+                <div class="left">
+                    <a href="index.html"><img src="./image/Traveller Logo.png" alt=""></a>
+                </div>
+                <div class="right">
+                    <div class="right1">
+                        <a href="index.html">Home</a>
+                        <a href="discover.html">Discover</a>
+                        <a href="">Location</a>
+                        <a href="about.html">About Us</a>
+                        <a href="support.html">Support</a>
+                    </div>
+                </div>
+            </nav>
+            <h1 class="heading">How Can We Help You,Write Us Your Query</h1>
+            <input id="input" class="inpt" type="text" placeholder="Email">
+            <button class="btn">Send Mail</button>
+        </div>
+        
+    </div>
+
+    <div class="faqHead">
+        <h1>Frequently Asked Question</h1>
+    </div>
+    
+
+    <div class="faq-container">
+
+        <input type="text" id="search-input" placeholder="Search FAQ">
+        <div class="faq">
+          <div class="question">Booking</div>
+          <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis ipsam possimus qui amet quae excepturi sunt illo quaerat voluptatum magnam, enim dignissimos dolorem laboriosam perferendis maxime? Optio fugit neque earum molestiae rem. Natus dolorum laboriosam dolorem, ratione ea quo at animi magni nobis corporis aliquam excepturi cumque quam debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum molestiae velit exercitationem perferendis laborum ex, dolorem laboriosam mollitia! Tempora ullam eveniet iste sunt voluptatem ducimus perspiciatis, molestiae repellendus. Quam maiores exercitationem veritatis corporis in quia eveniet ipsum accusamus, culpa excepturi sint tempora officiis enim id tenetur nostrum velit quos vel.
+
+          </div>
+        </div>
+        <div class="faq">
+           <div class="question">Pricing</div>
+          <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis ipsam possimus qui amet quae excepturi sunt illo quaerat voluptatum magnam, enim dignissimos dolorem laboriosam perferendis maxime? Optio fugit neque earum molestiae rem. Natus dolorum laboriosam dolorem, ratione ea quo at animi magni nobis corporis aliquam excepturi cumque quam debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum molestiae velit exercitationem perferendis laborum ex, dolorem laboriosam mollitia! Tempora ullam eveniet iste sunt voluptatem ducimus perspiciatis, molestiae repellendus. Quam maiores exercitationem veritatis corporis in quia eveniet ipsum accusamus, culpa excepturi sint tempora officiis enim id tenetur nostrum velit quos vel.
+            
+          </div>
+        </div>
+        <div class="faq">
+            <div class="question">Places</div>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis ipsam possimus qui amet quae excepturi sunt illo quaerat voluptatum magnam, enim dignissimos dolorem laboriosam perferendis maxime? Optio fugit neque earum molestiae rem. Natus dolorum laboriosam dolorem, ratione ea quo at animi magni nobis corporis aliquam excepturi cumque quam debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum molestiae velit exercitationem perferendis laborum ex, dolorem laboriosam mollitia! Tempora ullam eveniet iste sunt voluptatem ducimus perspiciatis, molestiae repellendus. Quam maiores exercitationem veritatis corporis in quia eveniet ipsum accusamus, culpa excepturi sint tempora officiis enim id tenetur nostrum velit quos vel.
+              
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">Contact</div>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis ipsam possimus qui amet quae excepturi sunt illo quaerat voluptatum magnam, enim dignissimos dolorem laboriosam perferendis maxime? Optio fugit neque earum molestiae rem. Natus dolorum laboriosam dolorem, ratione ea quo at animi magni nobis corporis aliquam excepturi cumque quam debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum molestiae velit exercitationem perferendis laborum ex, dolorem laboriosam mollitia! Tempora ullam eveniet iste sunt voluptatem ducimus perspiciatis, molestiae repellendus. Quam maiores exercitationem veritatis corporis in quia eveniet ipsum accusamus, culpa excepturi sint tempora officiis enim id tenetur nostrum velit quos vel.
+  
+            </div>
+          </div>
+          <div class="faq">
+             <div class="question">Meet People</div>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis ipsam possimus qui amet quae excepturi sunt illo quaerat voluptatum magnam, enim dignissimos dolorem laboriosam perferendis maxime? Optio fugit neque earum molestiae rem. Natus dolorum laboriosam dolorem, ratione ea quo at animi magni nobis corporis aliquam excepturi cumque quam debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum molestiae velit exercitationem perferendis laborum ex, dolorem laboriosam mollitia! Tempora ullam eveniet iste sunt voluptatem ducimus perspiciatis, molestiae repellendus. Quam maiores exercitationem veritatis corporis in quia eveniet ipsum accusamus, culpa excepturi sint tempora officiis enim id tenetur nostrum velit quos vel.
+              
+            </div>
+          </div>
+          <div class="faq">
+              <div class="question">Advance Booking</div>
+              <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis ipsam possimus qui amet quae excepturi sunt illo quaerat voluptatum magnam, enim dignissimos dolorem laboriosam perferendis maxime? Optio fugit neque earum molestiae rem. Natus dolorum laboriosam dolorem, ratione ea quo at animi magni nobis corporis aliquam excepturi cumque quam debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum molestiae velit exercitationem perferendis laborum ex, dolorem laboriosam mollitia! Tempora ullam eveniet iste sunt voluptatem ducimus perspiciatis, molestiae repellendus. Quam maiores exercitationem veritatis corporis in quia eveniet ipsum accusamus, culpa excepturi sint tempora officiis enim id tenetur nostrum velit quos vel.
+                
+              </div>
+          </div>
+      </div>
+ 
+      <footer>
+        <h1 style="text-align: center;  margin-top: 5%;">Subscribe Our NewsLetter</h1>
+        <div class="email-subs">
+            <input type="email" placeholder="Enter your Email Id">
+            <button>Subscribe</button>
+        </div>
+        <div class="fot-divs">
+            <div class="fot-div1">
+                <a href="index.html"><img src="./image/Traveller Logo.png" alt="" srcset=""></a>
+                <p><ion-icon name="location" class="icons1"></ion-icon></ion-icon> Lakshmipuram road, Guntur Andra
+                    Pradesh,
+                    India</p>
+                <p><ion-icon name="call" class="icons"></ion-icon> 0863 - 222000</p>
+                <p><ion-icon name="mail" class="icons"></ion-icon> travellermailId@gmail.com</p>
+            </div>
+            <div class="fot-div2">
+                <h2>MY ACCOUNT</h2>
+                <p>Search terms</p>
+                <p>Advance search</p>
+                <p>Order & Return</p>
+                <p>Hekps & FAQ</p>
+                <p>Store Location</p>
+            </div>
+            <div class="fot-div2">
+                <h2>INFORMATION</h2>
+                <p>News</p>
+                <p>FAQ</p>
+                <p>Returns & Refunds</p>
+                <p>Delivary</p>
+                <p>Privacy Policy &<br>Terms & Conditions</p>
+            </div>
+            <div class="fot-div2">
+                <h2>Activities</h2>
+                <p>Rock Climbing Gears</p>
+                <p>Solar Powered helmet</p>
+                <p>pull Rope Rubber</p>
+                <p>Pairing knife</p>
+                <p>Ladder Golf</p>
+            </div>
+        </div>
+        <div class="follow">
+            <h3>FOLLOW US ON</h3>
+            <ion-icon name="logo-facebook" class="folicon"></ion-icon>
+            <ion-icon name="logo-instagram" class="folicon"></ion-icon>
+            <ion-icon name="logo-twitter" class="folicon"></ion-icon>
+        </div>
+
+    </footer>
+    
+</body>
+
+<script>
+    const searchInput = document.getElementById('search-input');
+    const faqItems = document.querySelectorAll('.faq');
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+
+      faqItems.forEach(function(faq) {
+        const question = faq.querySelector('.question').textContent.toLowerCase();
+        const answer = faq.querySelector('.answer').textContent.toLowerCase();
+        
+        if (question.includes(query) || answer.includes(query)) {
+          faq.style.display = 'block';
+        } else {
+          faq.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</html>
