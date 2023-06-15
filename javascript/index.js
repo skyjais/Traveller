@@ -1,3 +1,23 @@
+// pop up-
+const subEmail = document.querySelector(".email-input");
+const subscribeButton = document.querySelector(".email-subs button");
+
+subscribeButton.addEventListener("click", () => {
+    const email = subEmail.value.trim();
+
+    if (email !== "") {
+        swal("Good job!", `You have Subscribe to our Newsletter with ` + email, "success").then(() => {
+            subEmail.value = "";
+        });
+
+    } else {
+        swal("Error", "Enter the Email", "error");
+    }
+});
+
+
+// Date display
+
 
 
 // count down -------------------------------------
@@ -76,28 +96,28 @@ const destinations = [
     {
         image: "./image/machu picchu.jpg",
         placeName: "Scottland",
-        rating: 4.5,
+        rating: "4.5",
         cityCountry: "Peterland",
         days: "3 days"
     },
     {
         image: "./image/machu picchu.jpg",
         placeName: "India",
-        rating: 4.5,
+        rating: "4.5",
         cityCountry: "Mizoram",
         days: "5 days"
     },
     {
         image: "./image/italy.jpg",
         placeName: "Italy",
-        rating: 4.5,
+        rating: "4.5",
         cityCountry: "Mazandaran",
         days: "1 Day"
     },
     {
         image: "./image/venice.jpg",
         placeName: "Venice",
-        rating: 5.0,
+        rating: "5.0",
         cityCountry: "Marcoh",
         days: "2 days"
     },
@@ -288,6 +308,10 @@ updateRatings();
 //---------------------FUNCTIONALITIES
 // ---------------------------------------
 
+// Toggle the hamburger menu
+
+
+
 // 2) Destinations from url
 const baseUrl = "https://traveller-63nk.onrender.com/products"
 
@@ -314,5 +338,7 @@ fetch(baseUrl)
         console.error('Error:', error);
     });
 
-// 2) Checkin-out
 
+
+// Icon Chainging from LS
+"user-list"
