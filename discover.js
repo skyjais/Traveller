@@ -61,7 +61,7 @@ function creatCard(item){
     card.append(cardImg,cardBody)
     return card
 }
-console.log("yash")
+
 
 let citySearchBtn = document.getElementById("city-search-btn");
 
@@ -69,5 +69,5 @@ citySearchBtn.addEventListener("click",function(){
     
 })
 
-let div = document.createElement("div")
-div.className = "yash"
+
+console.log("Vaishnav")
