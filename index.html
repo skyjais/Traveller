@@ -9,6 +9,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!-- POP Up -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Css -->
     <link rel="stylesheet" href="./style/index.css">
@@ -37,10 +39,21 @@
                     <a href="#"><ion-icon name="search"></ion-icon></a>
                     <button>Sign up</button>
                 </div>
+                <div class="navigation">
+                    <input type="checkbox" class="toogle-menu">
+                    <div class="hamburger">
+                    </div>
+                    <div class="menu">
+                        <a href="index.html">Home</a>
+                        <a href="">Discover</a>
+                        <a href="">Location</a>
+                        <a href="">About Us</a>
+                        <a href="">Support</a>
+                    </div>
+                </div>
             </div>
-            <!-- <div class="hamburger">
-                <ion-icon name="menu"></ion-icon>
-              </div> -->
+
+
         </nav>
 
         <!-- 1st part -->
@@ -53,15 +66,11 @@
                         <!-- destination from JS -->
                     </select>
 
-                    <div class="date-inputs">
-                        <label for="check-in" id="check-in-label">Check-in</label>
-                        <span class="separator">|</span>
-                        <label for="check-out">Check-out</label>
-                        <ion-icon name="calendar-outline"></ion-icon>
-                        <div class="calendar">
-                            <!-- Calendar content goes here -->
-                        </div>
-                    </div>
+                    <!-- <div class="date-inputs"> -->
+                        <input type="date" data-placeholder="Date" required>
+                    <!-- </div> -->
+                    
+
 
                     <select id="adults">
                         <option value="1">Adults</option>
@@ -232,7 +241,7 @@
     <footer>
         <h1 style="text-align: center;  margin-top: 5%;">Subscribe Our NewsLetter</h1>
         <div class="email-subs">
-            <input type="email" placeholder="Enter your Email Id">
+            <input type="email" placeholder="Enter your Email Id" class="email-input">
             <button>Subscribe</button>
         </div>
         <div class="fot-divs">
