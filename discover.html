@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="discover.css">
-    <title>Discover Page</title>
+    <title>Product Page</title>
 </head>
 <body>
     <div class="search">
-        <input type="text" placeholder="city" id="city-input">
+        <input type="text" placeholder="city" id="city-input" />
         <button id="city-search-btn">Search</button>
-        
-    </div>
+  
+        <div class="sortData">
+          <button id="sort-low-to-high">Price low to high</button>
+          <button id="sort-high-to-low">Price high to low</button>
+        </div>
+  
+        <select id="select-country">
+          <option class="country-option">Select Country</option>
+          <option class="country-option">India</option>
+          <option class="country-option">Italy</option>
+          <option class="country-option">Scotland</option>
+          <option class="country-option">America</option>
+        </select>
+      </div>
+  
     <div id="container">
 
+    </div>
+    <br><hr><br>
+    <div id="pagination-container">  
     </div>
 </body>
 </html>
