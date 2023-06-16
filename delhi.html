@@ -89,11 +89,6 @@
 <body>
 
    <div id="top">
-    <img src="./image/delhi.webp">
-    <h1>Delhi</h1>
-   </div>
-   <div id="para">
-    <p>Delhi is an incredible, crazy city bursting with flavors, color, and beautiful chaos! Spend busy days exploring historic mosques and ancient temples. Make your way through vibrant markets – some of the oldest and largest in the world. Your days will be full to the brim! Learn about India’s rich history and the many fascinating religions that make up Delhi culture. Taste deliciously unique cuisines, and embrace the local traditions!</p>
    </div>
 
    <h1>Places to Explore !</h1>
@@ -168,3 +163,16 @@ Of course, you can also simply admire the unique architecture, the marble facade
 
 </body>
 </html>
+
+<script>
+    let res = JSON.parse(localStorage.getItem("detail-data"))
+    let container = document.getElementById("top");
+    container.innerHTML = `
+    <img src=${res.image}>
+    <h1>${res.city}</h1>
+   </div>
+   <div id="para">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perferendis assumenda fugit voluptatibus consequatur! In voluptate repellat saepe voluptatibus, debitis, modi architecto atque sequi minima totam at, eos veritatis magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perferendis assumenda fugit voluptatibus consequatur! In voluptate repellat saepe voluptatibus, debitis, modi architecto atque sequi minima totam at, eos veritatis magni!</p>
+    </div>
+    `
+</script>

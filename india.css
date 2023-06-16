@@ -63,7 +63,7 @@ body{
 }
 .card > .card-body{
     padding: 0px 15px;
-    font-family: cursive;
+    /* font-family: cursive; */
 }
 .card-body > .div-first{
     display: flex;
