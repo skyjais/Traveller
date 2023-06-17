@@ -317,7 +317,7 @@ input[data-placeholder]::before {
   border-radius: 50%;
   border: 2px solid transparent;
   background-color: var(--btncolor);
-  border-top-color: blue;
+  border-top-color: rgb(0, 0, 255);
   animation: spin 5s infinite linear;
 }
 
