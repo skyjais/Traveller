@@ -170,6 +170,7 @@ function generatePlaces(places) {
 
             contentDiv.append(placeName, rating, cityCountry, days);
             gridItem.append(imageDiv, contentDiv);
+            
         }
 
         gridContainer.appendChild(gridItem);
