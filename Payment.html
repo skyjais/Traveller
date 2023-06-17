@@ -3,11 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Payment.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="container">
+    <h2>Payment Details</h2>
+  <div class="container">
+    <div class="left-column">
+      <form action="/process_payment" method="POST">
+        <label for="name">Name on Card:</label>
+        <input type="text" id="name" name="name" required>
 
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" required>
+
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="text" id="expiry_date" name="expiry_date" required placeholder="MM/YY">
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <button type="submit">Pay Now</button>
+      </form>
     </div>
+    <div class="right-column">
+      <div>
+        <h3>Number of People:</h3>
+        <div>
+          <button id="decrement">-</button>
+          <input type="number" id="peopleCount" value="0" min="1">
+          <button id="increment">+</button>
+        </div>
+        <h3>Price per Person:</h3>
+        <p id="Price">$10</p>
+        <div class="discount-container">
+          <input type="text" id="discountCode" placeholder="Discount code" class="discount-input">
+          <button id="applyDiscount">Apply</button>
+        </div>
+      </div>
+      <div id="After_discount">
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    const decrementButton = document.getElementById('decrement');
+    const incrementButton = document.getElementById('increment');
+    const peopleCountInput = document.getElementById('peopleCount');
+
+
+    
+    decrementButton.addEventListener('click', () => {
+      if (peopleCountInput.value > 0) {
+        peopleCountInput.value = parseInt(peopleCountInput.value) - 1;
+      }
+    });
+
+    incrementButton.addEventListener('click', () => {
+      peopleCountInput.value = parseInt(peopleCountInput.value) + 1;
+    });
+  </script>
 </body>
 </html>
