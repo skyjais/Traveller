@@ -101,7 +101,7 @@ const destinations = [
         days: "3 days"
     },
     {
-        image: "./image/machu picchu.jpg",
+        image: "image/mizoram.jpg",
         placeName: "India",
         rating: "4.5",
         cityCountry: "Mizoram",
@@ -340,3 +340,4 @@ fetch(baseUrl)
 
 
 "user-list"
+
