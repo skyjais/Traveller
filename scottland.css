@@ -68,7 +68,7 @@ body{
 }
 .card > .card-body{
     padding: 0px 15px;
-    font-family: sans-serif;
+    font-family: cursive;
 }
 .card-body > .div-first{
     display: flex;

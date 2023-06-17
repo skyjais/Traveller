@@ -118,6 +118,7 @@ function searchData() {
     });
     if (filteredData.length === 0) {
       container.innerText = "No Result Found!";
+      container.style = "text-align : center"
     } else {
       displayData(filteredData);
     }
@@ -135,7 +136,13 @@ selectCountry.addEventListener("change", function () {
     let sortedData = data.filter((item) =>
       item.title.toLowerCase().includes(selectedCountry)
     );
-    displayData(sortedData);
+    if(sortedData.length === 0){
+      container.innerHTML = "No Result Found!"
+      container.style = "text-align : center"
+    }
+    else {
+      displayData(sortedData);
+    }
   }
 });
 

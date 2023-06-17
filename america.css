@@ -114,7 +114,6 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
 }
-
 #pagination-container > button {
     width: 40px;
     height: 30px;
@@ -126,3 +125,4 @@ body{
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+
