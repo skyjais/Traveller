@@ -94,7 +94,7 @@ const destinations = [
         heading: "Popular place to Visit",
     },
     {
-        image: "./image/machu picchu.jpg",
+        image: "./image/machupicchu.jpg",
         placeName: "Scottland",
         rating: "4.5",
         cityCountry: "Peterland",
@@ -116,7 +116,7 @@ const destinations = [
     },
     {
         image: "./image/venice.jpg",
-        placeName: "Venice",
+        placeName: "America",
         rating: "5.0",
         cityCountry: "Marcoh",
         days: "2 days"
@@ -215,37 +215,36 @@ function updateRatings() {
     });
 }
 
-// window.onload = function () {
-//     const ratingElement = document.getElementById('rating-value');
-//     const rating = parseFloat(ratingElement.textContent);
-//     var roundedRating = Math.round(rating * 2) / 2;
-//     const starsElement = document.getElementById('stars');
 
-//     for (let i = 0; i < Math.floor(roundedRating); i++) {
-//         const starIcon = document.createElement('ion-icon');
-//         starIcon.setAttribute('name', 'star');
-//         starIcon.style.color = 'orange';
-//         starsElement.appendChild(starIcon);
-//     }
+// Book Now -------------------------------
+var bookNowButtons = document.querySelectorAll('.book-now');
 
-//     if (roundedRating % 1 !== 0) {
-//         const halfStarIcon = document.createElement('ion-icon');
-//         halfStarIcon.setAttribute('name', 'star-half');
-//         halfStarIcon.style.color = 'orange';
-//         starsElement.appendChild(halfStarIcon);
-//     }
+bookNowButtons.forEach(function(button) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
 
-//     const remainingStars = 5 - Math.ceil(roundedRating);
-//     for (let i = 0; i < remainingStars; i++) {
-//         const emptyStarIcon = document.createElement('ion-icon');
-//         emptyStarIcon.setAttribute('name', 'star-outline');
-//         emptyStarIcon.style.color = 'orange';
-//         starsElement.appendChild(emptyStarIcon);
-//     }
-// };
+    var divsContainer = button.closest('.divs');
+    var image = divsContainer.querySelector('img').getAttribute('src');
+    var place = divsContainer.querySelector('.place').textContent;
+    var location = divsContainer.querySelector('.locations').textContent.trim();
+    var packages = divsContainer.querySelector('.package').textContent;
+
+    var bookingDetails = {
+      Image: image,
+      Place: place,
+      Location: location,
+      Packages: packages
+    };
+
+    console.log(bookingDetails);
+    localStorage.setItem('book-now', JSON.stringify(bookingDetails));
+    window.location.href = "htmls/bookNow.html";
+  });
+});
 
 
 // -----------Testimonial
+
 
 const testimonials = [
     {
