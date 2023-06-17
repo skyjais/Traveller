@@ -1,0 +1,96 @@
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background: rgb(253, 252, 252);
+}
+
+#mainList {
+    width: 45%;
+    height: 50px;
+    margin: auto;
+    border-radius: 15px;
+    background: gray;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+#mainList > #addPlace, #mainList > #deletePlace, #mainList > #correctPlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    cursor: pointer;
+    height: 29px;
+    font-weight: bolder;
+    background: gray;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+}
+/* #mainList > #addPlace:hover, #mainList > #deletePlace:hover, #mainList > #correctPlace:hover{
+    background: #3497ec;
+} */
+
+#container {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    /* border: 1px solid red; */
+}
+
+#addingForm,
+#deletingForm,
+#correctionForm {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 20px 0px 20px 20px;
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    flex-direction: column;
+    row-gap: 20px;
+    box-sizing: border-box;
+}
+#addingForm input,#deletingForm input, #correctionForm input{
+    width: 50%;
+    margin-bottom: 5px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 0px 0px 0px 5px;
+}
+#addingForm label,#deletingForm label, #correctionForm label{
+    font-size: 20px;
+    color: rgb(100, 99, 99);
+}
+#category , #category2,#category3{
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+#post-btn , #delete-btn , #put-btn {
+    width: 16%;
+    height: 28px;
+    border-radius: 30px;
+    border: none;
+    background: #3497ec;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+

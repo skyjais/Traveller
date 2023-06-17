@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin page</title>
+    <link rel="stylesheet" href="https.css" />
+  </head>
+  <body>
+    <div id="mainList">
+      <div id="addPlace">Add place</div>
+      <div id="deletePlace">Delete place</div>
+      <div id="correctPlace">Correct place</div>
+    </div>
+
+    <div id="container">
+      <!-- === adding form === -->
+      <form id="addingForm" style="display: none">
+        <div>
+          <label><b>Select Location</b></label>
+          <select id="category">
+            <option value="select country">Select Country</option>
+            <option value="america">America</option>
+            <option value="italy">Italy</option>
+            <option value="india">India</option>
+            <option value="scottland">Scottland</option>
+          </select>
+        </div>
+        <div class="inputDiv">
+            <input type="text" id="addTitle" placeholder="Country" required /><br />
+            <input type="text" id="addCity" placeholder="City" required /><br />
+            <input type="url" id="addMainImageUrl" placeholder="Image URL" required/><br />
+            <input type="text" id="addPrice" placeholder="Price" /><br />
+            <button id="post-btn">Post</button>
+        </div>
+      </form>
+      <!-- == deleting form == -->
+      <form id="deletingForm" style="display: none">
+        <div>
+          <label><b>Select Location</b></label>
+          <select id="category2">
+            <option value="select country">Select Country</option>
+            <option value="america">America</option>
+            <option value="italy">Italy</option>
+            <option value="india">India</option>
+            <option value="scottland">Scottland</option>
+          </select>
+        </div>
+        <div class="inputDiv">
+            <input type="text" id="deleteId" placeholder="Enter Id" required/><br>
+            <button id="delete-btn">Delete</button>
+        </div>
+          
+      </form>
+      <!-- === correction form -->
+      <form id="correctionForm" style="display: none">
+        <div>
+          <label><b>Select Location</b></label>
+          <select id="category3">
+            <option value="select country">Select Country</option>
+            <option value="america">America</option>
+            <option value="italy">Italy</option>
+            <option value="india">India</option>
+            <option value="scottland">Scottland</option>
+          </select>
+        </div>
+        <div class="inputDiv">
+            <input type="text" id="id3" placeholder="Enter Id" required /><br />
+            <input type="text" id="city2" placeholder="City" required /><br />
+            <input type="url" id="logoImageUrl2" placeholder="Logo URL" required/><br />
+            <input type="url" id="mainImageUrl2" placeholder="Image URL" required/><br />
+            <input type="text" id="price2" placeholder="Price" /><br />
+            <button id="put-btn">Button</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="https.js"></script>
+</html>
+

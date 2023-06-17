@@ -16,7 +16,7 @@ fetchData(currentPage, limit);
 async function fetchData(page,limit){
     try {
         LoadAnimation();
-        let res = await fetch(`https://traveller-63nk.onrender.com/india?_page=${page}&_limit=${limit}`)
+        let res = await fetch(`https://traveller-63nk.onrender.com/scottland?_page=${page}&_limit=${limit}`)
         let total= res.headers.get("X-Total-Count");
         let total_page= Math.ceil(total/limit);
         displayButton(total_page,limit)
@@ -129,6 +129,3 @@ function LoadAnimation(){
 
     container.append(img);
 }
-
-
-
