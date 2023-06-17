@@ -317,7 +317,7 @@ input[data-placeholder]::before {
   border-radius: 50%;
   border: 2px solid transparent;
   background-color: var(--btncolor);
-  border-top-color: blue;
+  border-top-color: rgb(0, 0, 255);
   animation: spin 5s infinite linear;
 }
 
@@ -344,7 +344,7 @@ input[data-placeholder]::before {
   align-items: center;
   width: 100%;
   margin-top: 5%;
-  background: #7c7a233a;
+  background: #7c7a2382;
 }
 
 .div11 .div12 {
@@ -934,11 +934,13 @@ footer .follow .folicon {
     position: fixed;
     top: 0;
     right: -500px;
-    background-color: var(--btncolor);
+    background-color: rgba(67, 145, 255, 0.681);
+    ;
     width: 300px;
     padding-top: 30px;
     margin-top: 8.2%;
     margin-right: 7%;
+    z-index: 5;
   }
 
   .menu a {
@@ -947,13 +949,13 @@ footer .follow .folicon {
     font-size: 24px;
     text-decoration: none;
     color: white;
-    box-shadow: 0 1px rgba(255, 255, 255, 0.1)inset;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1) inset;
   }
 
   .menu a:hover {
     cursor: pointer;
     font-weight: bolder;
-    color: white;
+    color: black;
     padding: 35px 25px 20px 25px;
   }
 

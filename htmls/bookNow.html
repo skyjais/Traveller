@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <!-- Icon packs -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- POP Up -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="/style/bookNow.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="video-container">
+            <video src="/image/plane1.mp4" autoplay loop muted></video>
+        </div>
+        <div class="content">
+            <h2>Book Your Destination</h2>
+            <h3>Get ready for your<br>Dream Destinations</h3>
+        </div>
+        <nav>
+            <div class="left">
+                <a href="/index.html"><img src="/image/traveller log.png" alt=""></a>
+            </div>
+            <div class="right">
+                <div class="right1">
+                    <a href="/index.html">Home</a>
+                    <a href="">Discover</a>
+                    <a href="">Location</a>
+                    <a href="">About Us</a>
+                    <a href="/htmls/support.html">Support</a>
+                </div>
+            </div>
+            <div class="right2">
+                <div class="navigation">
+                    <input type="checkbox" class="toggle-menu" id="toggle-menu">
+                    <label class="hamburger" for="toggle-menu"></label>
+                    <div class="menu">
+                        <a href="/index.html">Home</a>
+                        <a href="">Discover</a>
+                        <a href="">Location</a>
+                        <a href="">About Us</a>
+                        <a href="/htmls/support.html">Support</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="box">
+        <div class="place-name">
+            <!-- <img src="/image/Maldives.jpg" alt="" class="place-image">
+            <h2>Maldives</h2> -->
+        </div>
+        <div class="Form-cont">
+            <div class="Form">
+                <h2 style="text-align: center;">Book Your Dream Place</h2>
+                <div>
+                    <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+                    <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" required placeholder="Enter Your Email">
+                    <div class="Gender">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="date" data-placeholder="Check-in" required>
+                    <input type="date" data-placeholder="Check-out" required>
+                </div>
+                <div>
+                    <input type="number" id="guest" name="guest" min="1" required placeholder="Number of Adults">
+                    <input type="number" id="children" name="children" min="0" required placeholder="Number of Children">
+                </div>
+                <button type="submit" class="submit-btn">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="/javascript/BookNow.js"></script>
+
+</html>

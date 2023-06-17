@@ -1,0 +1,756 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --btncolor: rgb(67, 161, 255);
+}
+
+button {
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+/* Navbar---------------------------------------- */
+
+nav {
+  margin: auto;
+  width: 85%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid gray;
+}
+
+nav .left img {
+  width: 100%;
+  max-width: 200px;
+}
+
+nav .right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 80%;
+  font-size: large;
+}
+
+nav .right .right1 a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  padding-bottom: 30px;
+  transition: 0.3s ease
+}
+
+nav .right .right1 a:hover {
+  box-shadow: 0 -5px 0px white inset, 500px 0 0 rgba(255, 255, 255, 0.03)inset;
+}
+
+nav .right .right1 a:nth-child(5) {
+  font-weight: bold;
+  font-size: larger;
+  box-shadow: 0 -5px white inset, 500px 0 0 rgba(255, 255, 255, 0.03)inset;
+}
+
+
+nav .right2 .navigation {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.hamburger::before {
+  top: -10px;
+  width: 30px;
+}
+
+.hamburger::after {
+  top: 10px;
+  width: 30px;
+}
+
+.toogle-menu {
+  position: relative;
+  width: 30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger,
+.toggle-menu,
+.menu {
+  display: none;
+}
+
+
+input[type="checkbox"]:checked~.hamburger {
+  background: transparent;
+}
+
+input[type="checkbox"]:checked~.hamburger::before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+input[type="checkbox"]:checked~.hamburger::after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+input:checked~.menu {
+  right: 0;
+}
+
+
+/*--------------------------------- */
+/*--------------------------------- */
+/*--------------------------------- */
+/*--------------------------------- */
+.section1 {
+  position: relative;
+  margin: auto;
+  height: 500px;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: justify;
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+.content h3 {
+  font-size: 30px;
+  transform: translateY(100px);
+  animation: slide-up 1.5s forwards;
+}
+
+.content h2 {
+  font-size: 46px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+/* -----------------------------FAQs-- */
+
+.FAqs {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.FAqs .faq-1:nth-child(1) .head {
+  display: flex;
+  justify-content: end;
+  margin-left: -3%;
+}
+
+.faq-1 {
+  border-radius: 5px;
+  padding: 20px;
+  padding-left: 15%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 5%;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.head h2 {
+  color: #333;
+}
+
+.quest {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid gray;
+  padding: 15px;
+}
+
+.seeM {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.seeM:nth-child(odd) {
+  border: none;
+  background: whitesmoke;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.seeM:nth-child(even) {
+  border: none;
+  background: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.toggle-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggle-article ion-icon {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.toggles-ms {
+  display: none;
+  margin-top: 10px;
+}
+
+.toggle-article.active+.toggles-ms {
+  display: block;
+  
+}
+
+
+
+
+
+
+
+/* Still need --------------------------------- */
+#still-head {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 75%;
+  margin: 5% auto;
+}
+
+.still {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: -3% auto;
+}
+
+.still-help {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.box {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.box-icon {
+  color: var(--btncolor);
+  background: rgba(128, 128, 128, 0.111);
+  padding: 5%;
+  font-size: 35px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.box-cnt {
+  color: #333333;
+}
+
+.box-cnt h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.box-cnt p {
+  font-size: 11px;
+}
+
+
+
+
+/* Fotter-------------------------------------- */
+footer {
+  margin-top: 7%;
+  background: var(--btncolor);
+  color: white;
+  font-size: bold;
+  padding-top: 1px;
+}
+
+footer .email-subs {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+footer .email-subs input {
+  border-radius: 20px;
+  height: 50px;
+  width: 30%;
+  padding-left: 25px;
+  text-align: start;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+footer .email-subs input::placeholder {
+  color: var(--btncolor);
+  font-weight: bolder;
+  font-size: large;
+}
+
+footer .email-subs button {
+  height: 50px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--btncolor);
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: larger;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+footer .email-subs input:hover,
+footer .email-subs button:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+footer .fot-divs {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid white;
+  margin: 5% auto;
+}
+
+footer .fot-divs .fot-div1 {
+  margin-top: 15px;
+  text-align: justify;
+  width: 100%;
+  max-width: 300px;
+  line-height: 1.5;
+  font-size: large;
+}
+
+footer .fot-divs .fot-div1 p {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+  line-height: 1.5;
+  margin-bottom: 50px
+}
+
+footer .fot-divs .fot-div1 p .icons {
+  font-size: 25px;
+}
+
+footer .fot-divs .fot-div1 p .icons1 {
+  font-size: 40px;
+}
+
+footer .fot-divs .fot-div1 img {
+  width: 100%;
+  max-width: 250px;
+}
+
+footer .fot-divs .fot-div2 {
+  text-align: justify;
+  font-size: large;
+  padding-left: 5%;
+  width: 20%;
+  line-height: 2.5;
+}
+
+footer .fot-divs .fot-div2 h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer .fot-divs .fot-div2 p {
+  margin: 5px 0;
+}
+
+footer .fot-divs .fot-div2 p:first-child {
+  margin-top: 10px;
+}
+
+footer .follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: -5%;
+  padding: 20px;
+
+}
+
+footer .follow .folicon {
+  font-size: 30px;
+}
+
+
+
+/* Media Screening------------------ */
+
+
+@media (max-width: 1090px) {
+
+  /* navBar------------------------------------ */
+  .right1 {
+    display: none;
+  }
+
+  .hamburger,
+  .toogle-menu {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    padding: 10px 20px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -500px;
+     background-color: rgba(67, 145, 255, 0.681);
+    width: 300px;
+    padding-top: 30px;
+    margin-top: 6.5%;
+    margin-right: 5%;
+    z-index: 5;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 30px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1) inset;
+  }
+
+  .menu a:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: black;
+    padding: 35px 25px 20px 25px;
+  }
+
+  /* First Section------------------------------ */
+  .content {
+    top: 35%;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+
+  /*FAQss-------------------------------------- */
+
+  .FAqs .faq-1:nth-child(1) .head {
+    margin-left: 2%;
+  }
+
+  .faq-1 {
+    padding-left: 10%;
+  }
+
+  .head h2 {
+    font-size: 24px;
+  }
+
+  .toggle-article ion-icon {
+    font-size: 14px;
+  }
+
+  /* Still need help--------------------------- */
+  #still-head {
+    justify-content: center;
+    width: 90%;
+  }
+
+  .still {
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .still-help {
+    width: 60%;
+    padding: 10px;
+  }
+
+  .box-cnt h3 {
+    font-size: 16px;
+  }
+
+  .box-cnt p {
+    font-size: 13px;
+  }
+
+  /* ------------------------------------footer */
+  footer .fot-divs .fot-div1,
+  footer .fot-divs .fot-div2 {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+
+}
+
+/* 2nd screening----------------------*/
+@media (min-width: 800px) and (max-width: 1090px) {
+
+
+
+
+  /*FAQss-------------------------------------- */
+  .FAqs .faq-1:nth-child(1) {
+    padding-left: 7.5%;
+  }
+
+  .faq-1 {
+    padding-left: 12%;
+  }
+
+  .head h2 {
+    font-size: 26px;
+  }
+
+  .toggle-article ion-icon {
+    font-size: 16px;
+  }
+
+
+  /* ------------------------------------footer */
+  footer .fot-divs .fot-div1 {
+    width: 45%;
+  }
+
+  footer .fot-divs .fot-div2 {
+    width: 45%;
+  }
+
+}
+
+/* 3rd screening--------------------------- */
+
+@media (max-width: 800px) {
+  /*1st Sections---------------------------------- */
+
+  .section1 {
+    height: 400px;
+  }
+
+  .content {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .content h2 {
+    font-size: 36px;
+  }
+
+  .content h3 {
+    font-size: 24px;
+  }
+
+  /*FAQss-------------------------------------- */
+
+  .faq-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .quest {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid gray;
+    padding: 15px;
+    padding-top: 20px;
+  }
+
+  .toggle-article {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .toggle-article ion-icon {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .head h2 {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .toggles-ms {
+    margin-top: 5px;
+  }
+
+  /* Still need help---------------------------- */
+
+  #still-head {
+    width: 100%;
+    text-align: center;
+  }
+
+  .still {
+    flex-direction: column;
+  }
+
+  .still-help {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .box {
+    margin-bottom: 15px;
+  }
+
+  .box-cnt h3 {
+    font-size: 18px;
+  }
+
+  .box-cnt p {
+    font-size: 13px;
+  }
+
+  /* ---------------------footer */
+  footer .email-subs input {
+    width: 50%;
+  }
+
+  footer .email-subs button {
+    width: 30%;
+  }
+
+  footer .fot-divs .fot-div1,
+  footer .fot-divs .fot-div2 {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+}
