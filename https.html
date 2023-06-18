@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- POP Up -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Admin page</title>
     <link rel="stylesheet" href="https.css" />
   </head>
@@ -11,7 +13,7 @@
     <div id="mainList">
       <div id="addPlace">Add place</div>
       <div id="deletePlace">Delete place</div>
-      <div id="correctPlace">Correct place</div>
+      <div id="editPlace">Edit place</div>
     </div>
 
     <div id="container">
@@ -54,7 +56,7 @@
           
       </form>
       <!-- === correction form -->
-      <form id="correctionForm" style="display: none">
+      <form id="editForm" style="display: none">
         <div>
           <label><b>Select Location</b></label>
           <select id="category3">
@@ -66,16 +68,39 @@
           </select>
         </div>
         <div class="inputDiv">
-            <input type="text" id="id3" placeholder="Enter Id" required /><br />
-            <input type="text" id="city2" placeholder="City" required /><br />
-            <input type="url" id="logoImageUrl2" placeholder="Logo URL" required/><br />
-            <input type="url" id="mainImageUrl2" placeholder="Image URL" required/><br />
-            <input type="text" id="price2" placeholder="Price" /><br />
-            <button id="put-btn">Button</button>
+            <input type="text" id="editId" placeholder="Enter Id" required /><br/>
+            <input type="text" id="editCountry" placeholder="Country" required /><br/>
+            <input type="text" id="editCity" placeholder="City" required /><br/>
+            <input type="url" id="editImageUrl" placeholder="Image URL" required/><br/>
+            <input type="text" id="editPrice" placeholder="Price" /><br/>
+            <button id="edit-btn">Edit</button>
         </div>
       </form>
-    </div>
+    </div> <br><hr><br>
+    <!-- search button and logo -->
+    <div class="searchLogo">
+      <input type="text" placeholder="city" id="city-input" />
+    <img id="search-button" src="https://www.pinclipart.com/picdir/big/485-4851736_free-png-search-icon-search-icon-free-download.png" alt="">
+    </div><br><hr><br>
+    <!-- table data append in table-->
+    <table id="tableData">
+     <thead>
+      <tr>
+        <th>Country</th>
+        <th>City</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+     </thead>
+     <tbody id="tableBody"></tbody>
+    </table><br><hr><br>
+    <!-- pagintaion data append in this div -->
+    <div id="pagination-container"></div>
+
+
   </body>
+
   <script src="https.js"></script>
 </html>
-

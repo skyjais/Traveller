@@ -163,5 +163,15 @@ Of course, you can also simply admire the unique architecture, the marble facade
   
 </body>
 </html>
-
-
+<script>
+    let res = JSON.parse(localStorage.getItem("detail-data"))
+    let container = document.getElementById("top");
+    container.innerHTML = `
+    <img src=${res.image}>
+    <h1>${res.city}</h1>
+   </div>
+   <div id="para">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perferendis assumenda fugit voluptatibus consequatur! In voluptate repellat saepe voluptatibus, debitis, modi architecto atque sequi minima totam at, eos veritatis magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perferendis assumenda fugit voluptatibus consequatur! In voluptate repellat saepe voluptatibus, debitis, modi architecto atque sequi minima totam at, eos veritatis magni!</p>
+    </div>
+    `
+</script>
