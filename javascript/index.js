@@ -1,3 +1,24 @@
+// switching to name
+var userList = JSON.parse(localStorage.getItem('user-list'));
+
+if (userList && userList.Name) {
+    var nameElement = document.createElement('h3');
+    nameElement.textContent = userList.Name.charAt(0);
+    nameElement.className = 'letter';
+
+    var admin = document.createElement('a');
+    admin.href = "#";
+    admin.innerHTML = `<ion-icon name="aperture"></ion-icon>`
+
+    var navRight = document.querySelector('.nav-right');
+    if (navRight) {
+        navRight.insertBefore(nameElement, navRight.firstChild);
+        navRight.insertBefore(admin, navRight.firstChild);
+    }
+}
+
+
+
 // pop up-
 const subEmail = document.querySelector(".email-input");
 const subscribeButton = document.querySelector(".email-subs button");
@@ -219,27 +240,29 @@ function updateRatings() {
 // Book Now -------------------------------
 var bookNowButtons = document.querySelectorAll('.book-now');
 
-bookNowButtons.forEach(function(button) {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
+bookNowButtons.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    var divsContainer = button.closest('.divs');
-    var image = divsContainer.querySelector('img').getAttribute('src');
-    var place = divsContainer.querySelector('.place').textContent;
-    var location = divsContainer.querySelector('.locations').textContent.trim();
-    var packages = divsContainer.querySelector('.package').textContent;
+        var divsContainer = button.closest('.divs');
+        var image = divsContainer.querySelector('img').getAttribute('src');
+        var place = divsContainer.querySelector('.place').textContent;
+        var location = divsContainer.querySelector('.locations').textContent.trim();
+        var packages = divsContainer.querySelector('.package').textContent;
+        var price = Math.floor(Math.random() * 9000) + 1000;
 
-    var bookingDetails = {
-      Image: image,
-      Place: place,
-      Location: location,
-      Packages: packages
-    };
+        var bookingDetails = {
+            Image: image,
+            Place: place,
+            Location: location,
+            Packages: packages,
+            Price: price
+        };
 
-    console.log(bookingDetails);
-    localStorage.setItem('book-now', JSON.stringify(bookingDetails));
-    window.location.href = "htmls/bookNow.html";
-  });
+        console.log(bookingDetails);
+        localStorage.setItem('book-now', JSON.stringify(bookingDetails));
+        window.location.href = "htmls/bookNow.html";
+    });
 });
 
 
@@ -340,5 +363,5 @@ fetch(baseUrl)
 
 
 // Icon Chainging from LS
-"user-list"
+// "user-list"
 

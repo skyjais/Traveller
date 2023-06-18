@@ -1,3 +1,20 @@
+const subEmail = document.querySelector(".email-input");
+const subscribeButton = document.querySelector(".email-subs button");
+
+subscribeButton.addEventListener("click", () => {
+    const email = subEmail.value.trim();
+
+    if (email !== "") {
+        swal("Good job!", `You have Subscribe to our Newsletter with ` + email, "success").then(() => {
+            subEmail.value = "";
+        });
+
+    } else {
+        swal("Error", "Enter the Email", "error");
+    }
+});
+
+
 
 // Retrived from Local Storage
 
@@ -7,10 +24,14 @@ var storedData = JSON.parse(localStorage.getItem('book-now'));
 
 placeName.innerHTML = `
     <img src= /${storedData.Image} alt="" class="place-image">
-    <h2>${storedData.Place}</h2>
-    <p><ion-icon name="location"></ion-icon> ${storedData.Location}</p>
 `
 
+
+var placeElement = document.getElementById('place');
+var priceElement = document.getElementById('price');
+
+placeElement.innerHTML = `Place:<span class='place-highlight'> <ion-icon name="location-outline"></ion-icon>  ` + storedData.Place + `, ` + storedData.Location + `</span>`;
+priceElement.innerHTML = "Price: <span class='price-highlight'>₹ " + storedData.Price + "/-</span>";
 
 // form page
 var form = document.querySelector('.submit-btn');
@@ -33,7 +54,10 @@ form.addEventListener('click', function (e) {
         check_In: checkIn,
         check_Out: checkOut,
         Adults: numOfAdults,
-        Children: numOfChildren
+        Children: numOfChildren,
+        Place: storedData.Place,
+        Location: storedData.Location,
+        Price: storedData.Price
     };
     console.log(payment);
     localStorage.setItem('payment', JSON.stringify(payment));

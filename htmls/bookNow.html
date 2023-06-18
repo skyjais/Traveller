@@ -54,14 +54,16 @@
         </nav>
     </div>
 
+<h1></h1>
+
+
     <div class="box">
         <div class="place-name">
-            <!-- <img src="/image/Maldives.jpg" alt="" class="place-image">
-            <h2>Maldives</h2> -->
+            <!-- JS is here -->
         </div>
         <div class="Form-cont">
             <div class="Form">
-                <h2 style="text-align: center;">Book Your Dream Place</h2>
+                <h2 style="text-align: center;">Booking Details</h2>
                 <div>
                     <input type="text" id="firstName" name="firstName" required placeholder="First Name">
                     <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
@@ -81,14 +83,70 @@
                 </div>
                 <div>
                     <input type="number" id="guest" name="guest" min="1" required placeholder="Number of Adults">
-                    <input type="number" id="children" name="children" min="0" required placeholder="Number of Children">
+                    <input type="number" id="children" name="children" min="0" required
+                        placeholder="Number of Children">
                 </div>
-                <button type="submit" class="submit-btn">Proceed to Payment</button>
+                <div>
+                    <h3 id="place">Place: -None-</h3>
+                </div>
+                <div id="lst-form">
+                    <p><h3 id="price"> </h3>
+                    <button type="submit" class="submit-btn">Proceed to Payment</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- footer -->
 
+    <footer>
+        <h1 style="text-align: center;  margin-top: 5%;">Subscribe Our NewsLetter</h1>
+        <div class="email-subs">
+            <input type="email" placeholder="Enter your Email Id" class="email-input">
+            <button>Subscribe</button>
+        </div>
+        <div class="fot-divs">
+            <div class="fot-div1">
+                <a href="/index.html"><img src="/image/Traveller logo.png" alt="" srcset=""></a>
+                <p><ion-icon name="location" class="icons1"></ion-icon></ion-icon> Lakshmipuram road, Guntur Andra
+                    Pradesh,
+                    India</p>
+                <p><ion-icon name="call" class="icons"></ion-icon> 0863 - 222000</p>
+                <p><ion-icon name="mail" class="icons"></ion-icon> travellermailId@gmail.com</p>
+            </div>
+            <div class="fot-div2">
+                <h2>MY ACCOUNT</h2>
+                <p>Search terms</p>
+                <p>Advance search</p>
+                <p>Order & Return</p>
+                <p>Hekps & FAQ</p>
+                <p>Store Location</p>
+            </div>
+            <div class="fot-div2">
+                <h2>INFORMATION</h2>
+                <p>News</p>
+                <p>FAQ</p>
+                <p>Returns & Refunds</p>
+                <p>Delivary</p>
+                <p>Privacy Policy &<br>Terms & Conditions</p>
+            </div>
+            <div class="fot-div2">
+                <h2>Activities</h2>
+                <p>Rock Climbing Gears</p>
+                <p>Solar Powered helmet</p>
+                <p>pull Rope Rubber</p>
+                <p>Pairing knife</p>
+                <p>Ladder Golf</p>
+            </div>
+        </div>
+        <div class="follow">
+            <h3>FOLLOW US ON</h3>
+            <ion-icon name="logo-facebook" class="folicon"></ion-icon>
+            <ion-icon name="logo-instagram" class="folicon"></ion-icon>
+            <ion-icon name="logo-twitter" class="folicon"></ion-icon>
+        </div>
+
+    </footer>
 </body>
 <script src="/javascript/BookNow.js"></script>
 
