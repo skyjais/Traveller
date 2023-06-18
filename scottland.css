@@ -1,0 +1,128 @@
+body{
+    background: #fff;
+}
+.search{
+    width: 35%;
+    height: 50px;
+    margin: auto;
+    border-radius: 10px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.search > #sort-low-to-high{
+    width: 40%;
+    height: 32px;
+    font-weight: bolder;
+    background: gray;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 30px;
+    color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.search > #sort-high-to-low{
+    width: 40%;
+    height: 32px;
+    font-weight: bolder;
+    background: gray;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 30px;
+    color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* <-----------------------------------------------------> */
+/* Card CSS */
+.child{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    margin: auto;
+    border-radius: 10px;
+}
+.card{
+    box-sizing: border-box;
+    line-height: 7px;
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #fff;
+}
+.card > .card-image{
+    width: 100%;
+}
+.card-image > img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+.card > .card-body{
+    padding: 0px 15px;
+    font-family: cursive;
+}
+.card-body > .div-first{
+    display: flex;
+    justify-content: space-around;
+}
+.div-city-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+.card-body > .div-second{
+    display: flex;
+    justify-content: space-around;
+}
+.div-second>.card-btn{
+    width: 90px;
+    height: 30px;
+    background: #3497ec;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.div-city-logo > .logo-img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+/* <-----------------------------------------------------> */
+/* Pagination CSS */
+
+#pagination-container{    
+    width: 40%;
+    margin: auto;
+    height: 40px;
+    /* background: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
+
+#pagination-container > button {
+    width: 40px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background: #3497ec;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}

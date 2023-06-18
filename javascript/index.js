@@ -191,6 +191,7 @@ function generatePlaces(places) {
 
             contentDiv.append(placeName, rating, cityCountry, days);
             gridItem.append(imageDiv, contentDiv);
+            
         }
 
         gridContainer.appendChild(gridItem);
@@ -363,5 +364,6 @@ fetch(baseUrl)
 
 
 // Icon Chainging from LS
+// "user-list"
 // "user-list"
 

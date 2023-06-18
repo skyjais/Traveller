@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+<title>LOCATION</title>
+    <style>
+                /* Nav part------------------------- */
+
+
+nav {
+  margin: auto;
+  width: 97%;
+  height: 130px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgb(214, 197, 197);
+}
+
+nav .left img {
+  width: 100%;
+  max-width: 200px;
+  margin-left: 100px;
+}
+
+nav .right {
+    width: 60%;
+  /* display: flex;
+  justify-content: center; */
+  
+  
+  /* border: 2px solid red; */
+  align-items: flex-end;
+  font-size: large;
+  margin-right: 20px
+}
+.right1 {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30px;
+    height: 40px;
+    padding-top: 5px;
+    
+    /* margin-left: 100px; */
+}
+
+
+nav .right .right1 a {
+  /* margin-right: 20px; */
+  
+  color: black;
+  /* text-align: center; */
+
+ 
+  /* border: 3px solid blue; */
+  text-decoration: none;
+  /* font-family: 'Darumadrop One', cursive; */
+  font-size: larger;
+  margin-right: 30px;
+  /* padding-bottom: 20px; */
+}
+
+
+
+
+nav .right .right1 a:hover {
+  border-bottom: 5px solid black;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+nav .right .right1 a:nth-child(1) {
+  /* border-bottom: 5px solid black; */
+  /* font-weight: bold; */
+  font-size: larger;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+
+        /* nav.............................................................. */
+
+        .div1{
+    width: 400px;
+    height: 770px;
+    margin-top: 10px;
+    
+    background-color: whitesmoke;
+}
+
+.imgDiv{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1515091943-9d5c0ad475af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGluZGlhfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv11{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1527838832700-5059252407fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHVya2V5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv1{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXRhbHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv2{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXRhbHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv3{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1558642084-fd07fae5282e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BhaW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+
+#imgDiv4{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv5{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1512315342380-81f12a02bd7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv6{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1509259305526-037fbbf698fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEF1c3RyYWxpYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv7{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1529733905113-027ed85d7e33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TmVwYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv8{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1555821108-3fb2763b226a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJodXRhbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+#imgDiv9{
+    width: 95%;
+    height: 480px;
+    
+    background-image: url("https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZWNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+ background-position: center;
+ margin: auto;
+ margin-top: 10px;
+ transition: transform 0.9s ease;
+}
+
+
+.imgDiv:hover{
+    transform: scale(1.05);
+    transition: transform 0.9s ease;
+}
+
+p{
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+h2{
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.btn{
+    width: 115px;
+    height: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+   font-size:22px ;
+   color: white;
+   font-weight: bold;
+    margin-left:280px ;
+    background-color: rgb(67, 161, 255);
+    padding-right: 20px;
+    border-radius: 8px;
+    transition: transform 0.9s ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.9s ease;
+}
+
+.icon{
+    position: absolute;
+    margin-top: 0px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 35px;
+}
+
+
+
+/* search...................................... */
+
+.search{
+
+    width: 97%;
+   background-color: whitesmoke;
+    margin: auto;
+    height: 80px;
+    margin-top: 10px;
+
+}
+
+
+
+#searchInput{
+  margin-left: 2%;
+ 
+  height: 28px;
+  width: 250px;
+  border-radius: 5px;
+  transition: transform 0.5s ease;
+  font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+#searchInput:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+#searchButton{
+margin-left: 20px;
+height: 28px;
+border-radius: 5px;
+transition: transform 0.5s ease;
+font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#searchButton:hover{
+    transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.dosearch{
+    margin-top: 25px;
+}
+
+h1{
+    margin-top: 70px;
+}
+
+.dest{
+    margin-top: 13px;
+    font-size: 27px;
+    margin-left: 20%;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+/* search...................................... */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href="index.html"><img src="./image/traveller log.png" alt=""></a>
+        </div>
+        <div class="right">
+            <div class="right1">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="">Location</a>
+                <a href="about.html">About Us</a>
+                <a href="./htmls/support.html">Support</a>
+            </div>
+        </div>
+
+        <!-- <div class="right2">
+            <div class="nav-right">
+                <a href="#"><ion-icon name="person"></ion-icon></a>
+                <a href="#"><ion-icon name="search"></ion-icon></a>
+                <button>Sign up</button> -->
+            <!-- </div>
+        </div> -->
+        <!-- <div class="hamburger">
+            <ion-icon name="menu"></ion-icon>
+          </div> -->
+    </nav>
+    
+    <div class="search">
+        <button class="dest">Search Your Destination</button>
+        <input type="text" class="dosearch" id="searchInput" placeholder="Search">
+         <button class="dosearch" id="searchButton">Search</button>
+    </div>
+
+    <div class="container">
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv0">
+
+            </div>
+            <h2 class="title">India</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv11">
+
+            </div>
+            <h2 class="title">Turkey</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv1">
+
+            </div>
+            <h2 class="title">Italy</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv2">
+
+            </div>
+            <h2 class="title">Scottland</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv3">
+
+            </div>
+            <h2 class="title">Spain</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv4">
+
+            </div>
+            <h2 class="title">Thailand</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv5">
+
+            </div>
+            <h2 class="title">America</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv6">
+
+            </div>
+            <h2 class="title">Australia</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv7">
+
+            </div>
+            <h2 class="title">Nepal</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv8">
+
+            </div>
+            <h2 class="title">Bhutan</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+
+        <div class="div1">
+            <div class="imgDiv" id="imgDiv9">
+
+            </div>
+            <h2 class="title">Greece</h2>
+            <p class="desc" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cumque esse laboriosam distinctio ut excepturi aperiam, laborum nisi quasi explicabo architecto beatae at ad voluptatum tenetur deserunt. Odit itaque temporibus quia repudiandae numquam sint nesciunt eveniet voluptates perferendis! Hic, impedit placeat? Veniam, debitis perferendis maiores nemo excepturi est impedit suscipit.</p>
+            <button class="btn">see more <ion-icon class="icon" name="arrow-forward-outline" id="arrow"></ion-icon></button>
+        </div>
+
+
+    </div>
+</body>
+
+<script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+  // Get the search keyword from the input field
+  var keyword = document.getElementById('searchInput').value.toLowerCase();
+
+  // Get all the div1 elements
+  var divs = document.getElementsByClassName('div1');
+
+  // Loop through each div and check if the title or description contains the keyword
+  for (var i = 0; i < divs.length; i++) {
+    var title = divs[i].querySelector('.title').innerText.toLowerCase();
+    var desc = divs[i].querySelector('.desc').innerText.toLowerCase();
+
+    // Show or hide the div based on the search result
+    if (title.includes(keyword) || desc.includes(keyword)) {
+      divs[i].style.display = 'block';
+    } else {
+      divs[i].style.display = 'none';
+    }
+  }
+});
+</script>
+</html>
