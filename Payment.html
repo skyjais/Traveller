@@ -1,86 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Payment.css">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Payment Details</h2>
-  <div class="container">
-    <div class="left-column">
-      <form action="/process_payment" method="POST">
-        <label for="name">Name on Card:</label>
-        <input type="text" id="name" name="name" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <label for="card_number">Card Number:</label>
-        <input type="text" id="card_number" name="card_number" required>
+	<!-- POP Up -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-        <label for="expiry_date">Expiry Date:</label>
-        <input type="text" id="expiry_date" name="expiry_date" required placeholder="MM/YY">
-
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required>
-
-        <button type="submit">Pay Now</button>
-      </form>
-    </div>
-    <div class="right-column">
-      <div>
-        <h3>Number of People:</h3>
-        <div>
-          <button id="decrement">-</button>
-          <input type="number" id="peopleCount" value="0" min="1">
-          <button id="increment">+</button>
-        </div>
-        <h3>Price per Person:</h3>
-        <p id="Price">$10</p>
-        <div class="discount-container">
-          <input type="text" id="discountCode" placeholder="Discount code" class="discount-input">
-          <button id="applyDiscount">Apply</button>
+    <link rel="stylesheet" href="payment.css" />
+    <title>Payment Gateway</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Credit Payment</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Card Holder Name" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Card Number" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="date" placeholder="Exp Date" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="CVV" />
+            </div>
+            <div>
+              <h2 class="place">Place: Undefined</h2>
+              <h3 class="price">Price: Null</h3>
+            </div>
+            <input type="submit" value="pay Now" class="btn solid" />
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">UPI Payment</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="UPI ID" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="text" placeholder="Phone Number" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="OTP" />
+            </div>
+            <div>
+              <h2 class="place">Place: Undefined</h2>
+              <h3 class="price">Price: Null</h3>
+            </div>
+            <input type="submit" class="btn" value="Pay Now" />
+          </form>
         </div>
       </div>
-      <div id="After_discount">
-        
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+              ex ratione. Aliquid!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              UPI Payment
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              laboriosam ad deleniti.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">Pay Now</button>
+          </div>
+          <img
+            src="https://cdn.dribbble.com/users/1976094/screenshots/4687414/buss_trvl.gif"
+            class="image"
+            alt=""
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    const decrementButton = document.getElementById('decrement');
-    const incrementButton = document.getElementById('increment');
-    const peopleCountInput = document.getElementById('peopleCount');
 
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+      const sign_up_btn = document.querySelector("#sign-up-btn");
+      const container = document.querySelector(".container");
 
-    
-    decrementButton.addEventListener('click', () => {
-      if (peopleCountInput.value > 0) {
-        peopleCountInput.value = parseInt(peopleCountInput.value) - 1;
-      }
-    });
+      sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+      });
 
-    incrementButton.addEventListener('click', () => {
-      peopleCountInput.value = parseInt(peopleCountInput.value) + 1;
-    });
+      sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+      });
 
+      // pop up-
 
+       const submitbtn = document.querySelector(".btn");
+	   const submitbtn1 = document.querySelector("#btn2")
 
-    // pop up-
-const subEmail = document.querySelector(".email-input");
-const subscribeButton = document.querySelector(".email-subs button");
+      submitbtn.addEventListener("click", () => {
+        // const email = subEmail.value.trim();
 
-subscribeButton.addEventListener("click", () => {
-    const email = subEmail.value.trim();
-
-    if (email !== "") {
-        swal("Good job!", `You have Subscribe to our Newsletter with ` + email, "success").then(() => {
+        // if (email !== "") {
+          swal(
+            "Good job!",
+            `Payment Successfull `,
+            "success"
+          ).then(() => {
             subEmail.value = "";
-        });
+          });
+        // } else {
+        //   swal("Error", "Enter the Email", "error");
+        // }
+      });
+	  
+    //   submitbtn1.addEventListener("click", () => {
+    //     // const email = subEmail.value.trim();
 
-    } else {
-        swal("Error", "Enter the Email", "error");
-    }
-});
+    //     // if (email !== "") {
+    //       swal(
+    //         "Good job!",
+    //         `Payment Successfull `,
+    //         "success"
+    //       ).then(() => {
+    //         subEmail.value = "";
+    //       });
+    //     // } else {
+    //     //   swal("Error", "Enter the Email", "error");
+    //     // }
+    //   });
+
+// 	var placeName = document.querySelector('.place');
+
+// var storedData = JSON.parse(localStorage.getItem('payment'));
+
+// placeName.textContent = "waka"
+
+
+var placeElement = document.getElementById('place');
+var priceElement = document.getElementById('price');
+
+ // Retrieve location and price values from local storage
+ var storedData = JSON.parse(localStorage.getItem('payment'));
+    var locationValue = storedData ? storedData.Locations : 'Undefined';
+    var priceValue = storedData ? storedData.Price : 'Null';
+
+    // Update the content of the place and price elements
+    var placeElement = document.querySelector('.place');
+    var priceElement = document.querySelector('.price');
+    placeElement.textContent = "Place: " + locationValue;
+    priceElement.textContent = "Price: " + priceValue;
   </script>
-</body>
+    </script>
+  </body>
 </html>
+
+
+<!-- Local storage  -->
+<!-- booknow -->
+<!-- Price -->
+<!-- Locations -->
