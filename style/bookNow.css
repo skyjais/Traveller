@@ -213,23 +213,23 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 95%;
     padding-bottom: 5%;
-    background: white;
+    background: whitesmoke;
+
+    gap: 10px;
     padding: 20px;
-    border: 1px solid red;
 }
 
 .place-name {
     position: relative;
     display: inline-block;
-    border-top-right-radius: 30% 60%;
-    border-bottom-right-radius: 30% 60%;
+    border-radius: 30% 10%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.293);
-    overflow: hidden; 
+    overflow: hidden;
     padding: 3px;
     flex: 1;
-    
+
 }
 
 .place-name img.place-image {
@@ -238,45 +238,26 @@ video {
     max-height: 550px;
     object-fit: cover;
     display: block;
-    border-top-right-radius: 30% 60%;
-    border-bottom-right-radius: 30% 60%;   
-
+    border-radius: 30% 10%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.place-name h2 {
-    width: 100%;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: xx-large;
-    color: white;
-    padding: 10px;
-    z-index: 1;
-}
-.place-name p {
-    width: 100%;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: xx-large;
-    color: chartreuse;
-    padding: 10px;
-    z-index: 1;
+.place-name img.place-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .box .Form-cont {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* border: 3px solid black; */
     width: 55%;
     height: 550px;
     border-top-left-radius: 30% 60%;
     border-bottom-left-radius: 30% 60%;
     background-color: #f5f5f593;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.293);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
 }
 
 .Form {
@@ -328,6 +309,13 @@ input[data-placeholder]::before {
     color: gray;
 }
 
+input:focus,
+input:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
 .Gender {
     display: flex;
     align-items: center;
@@ -339,20 +327,184 @@ input[data-placeholder]::before {
     font-size: 14px;
 }
 
-button {
+#lst-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.place-highlight {
+    color: var(--btncolor);
+    font-weight: bolder;
+}
+
+.place-highlight:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.price-highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.price-highlight:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#place ion-icon {
+
+    margin-bottom: -3px;
+}
+
+#lst-form button {
     width: 40%;
-    margin-top: 10%;
-    align-self: flex-end;
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     font-size: 15px;
 }
 
-button:hover {
+#lst-form button:hover {
     background-color: #0056b3;
 }
+
+
+/* Fotter---------------- */
+footer {
+    margin-top: 7%;
+    background: var(--btncolor);
+    color: white;
+    font-size: bold;
+    padding-top: 1px;
+  }
+  
+  footer .email-subs {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+  
+  footer .email-subs input {
+    border-radius: 20px;
+    height: 50px;
+    width: 30%;
+    padding-left: 25px;
+    text-align: start;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  
+  footer .email-subs input::placeholder {
+    color: var(--btncolor);
+    font-weight: bolder;
+    font-size: large;
+  }
+  
+  footer .email-subs button {
+    height: 50px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--btncolor);
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  footer .email-subs input:hover,
+  footer .email-subs button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  }
+  
+  footer .fot-divs {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid white;
+    margin: 5% auto;
+  }
+  
+  footer .fot-divs .fot-div1 {
+    margin-top: 15px;
+    text-align: justify;
+    width: 100%;
+    max-width: 300px;
+    line-height: 1.5;
+    font-size: large;
+  }
+  
+  footer .fot-divs .fot-div1 p {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+    line-height: 1.5;
+    margin-bottom: 50px
+  }
+  
+  footer .fot-divs .fot-div1 p .icons {
+    font-size: 25px;
+  }
+  
+  footer .fot-divs .fot-div1 p .icons1 {
+    font-size: 40px;
+  }
+  
+  footer .fot-divs .fot-div1 img {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  footer .fot-divs .fot-div2 {
+    text-align: justify;
+    font-size: large;
+    padding-left: 5%;
+    width: 20%;
+    line-height: 2.5;
+  }
+  
+  footer .fot-divs .fot-div2 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  footer .fot-divs .fot-div2 p {
+    margin: 5px 0;
+  }
+  
+  footer .fot-divs .fot-div2 p:first-child {
+    margin-top: 10px;
+  }
+  
+  footer .follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: -5%;
+    padding: 20px;
+  
+  }
+  
+  footer .follow .folicon {
+    font-size: 30px;
+  }
+  
