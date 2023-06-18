@@ -216,16 +216,16 @@ function redirectToPage(place) {
 
     switch (place.placeName) {
         case 'Scottland':
-            window.location.href = 'scottland.html';
+            window.location.href = 'htmls/scottland.html';
             break;
         case 'India':
-            window.location.href = 'india.html';
+            window.location.href = 'htmls/india.html';
             break;
         case 'Italy':
-            window.location.href = 'italy.html';
+            window.location.href = 'htmls/italy.html';
             break;
         case 'America':
-            window.location.href = 'america.html';
+            window.location.href = 'htmls/america.html';
             break;
         default:
             break;

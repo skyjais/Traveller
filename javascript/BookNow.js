@@ -61,5 +61,5 @@ form.addEventListener('click', function (e) {
     };
     console.log(payment);
     localStorage.setItem('payment', JSON.stringify(payment));
-    // window.location.href = "payment.html";
+    window.location.href = "/htmls/Payment.html";
 });

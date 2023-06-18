@@ -11,7 +11,7 @@
 	<!-- POP Up -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <link rel="stylesheet" href="payment.css" />
+    <link rel="stylesheet" href="/style/Payment.css" />
     <title>Payment Gateway</title>
   </head>
   <body>
@@ -87,7 +87,7 @@
             <button class="btn transparent" id="sign-in-btn">Credit Payment</button>
           </div>
           <img
-            src="https://cdn.dribbble.com/users/1976094/screenshots/4687414/buss_trvl.gif"
+            src=""
             class="image" id="img2"
             alt=""
           />
@@ -123,12 +123,19 @@
             "Good job!",
             `Payment Successfull `,
             "success"
-          ).then(() => {
-            subEmail.value = "";
+          )
+          .then(() => {
+            // subEmail.value = "";
+            window.location.href= "/index.html"
           });
+          // .then(() => {
+          //   subEmail.value = "";
+          // });
         // } else {
         //   swal("Error", "Enter the Email", "error");
         // }
+
+        //window.location.href= "htmls\discover.html"
       });
 	  
       UPIbtn.addEventListener("click",()=>{
@@ -136,9 +143,15 @@
             "Good job!",
             `Payment Successfull `,
             "success"
-          ).then(() => {
-            subEmail.value = "";
+            
+          )
+          
+          .then(() => {
+            // subEmail.value = "";
+            window.location.href= "/index.html"
           });
+
+         
       })
     //   submitbtn1.addEventListener("click", () => {
     //     // const email = subEmail.value.trim();
@@ -168,7 +181,7 @@ var priceElement = document.getElementById('price');
 
  // Retrieve location and price values from local storage
  var storedData = JSON.parse(localStorage.getItem('payment'));
-    var locationValue = storedData ? storedData.Locations : 'Undefined';
+    var locationValue = storedData ? storedData.Location : 'Undefined';
     var priceValue = storedData ? storedData.Price : 'Null';
 
     // Update the content of the place and price elements
@@ -184,7 +197,7 @@ var priceElement = document.getElementById('price');
 
  // Retrieve location and price values from local storage
  var storedData = JSON.parse(localStorage.getItem('payment'));
-    var locationValues = storedData ? storedData.Locations : 'Undefined';
+    var locationValues = storedData ? storedData.Location : 'Undefined';
     var priceValues = storedData ? storedData.Price : 'Null';
 
     // Update the content of the place and price elements
