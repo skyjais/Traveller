@@ -70,6 +70,9 @@ body{
     padding: 0px 15px;
     font-family: sans-serif;
 }
+.card-btn{
+    cursor: pointer;
+}
 .card-body > .div-first{
     display: flex;
     justify-content: space-around;
