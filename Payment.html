@@ -57,10 +57,10 @@
               <input type="password" placeholder="OTP" />
             </div>
             <div>
-              <h2 class="place">Place: Undefined</h2>
-              <h3 class="price">Price: Null</h3>
+              <h2 class="places">Place: Undefined</h2>
+              <h3 class="prices">Price: Null</h3>
             </div>
-            <input type="submit" class="btn" value="Pay Now" />
+            <input type="submit" id="UPIbtn" class="btn" value="Pay Now" />
           </form>
         </div>
       </div>
@@ -102,6 +102,8 @@
       const sign_up_btn = document.querySelector("#sign-up-btn");
       const container = document.querySelector(".container");
 
+      const upibtn=document.getElementById("UPIbtn");
+
       sign_up_btn.addEventListener("click", () => {
         container.classList.add("sign-up-mode");
       });
@@ -131,6 +133,15 @@
         // }
       });
 	  
+      UPIbtn.addEventListener("click",()=>{
+        swal(
+            "Good job!",
+            `Payment Successfull `,
+            "success"
+          ).then(() => {
+            subEmail.value = "";
+          });
+      })
     //   submitbtn1.addEventListener("click", () => {
     //     // const email = subEmail.value.trim();
 
@@ -167,6 +178,22 @@ var priceElement = document.getElementById('price');
     var priceElement = document.querySelector('.price');
     placeElement.textContent = "Place: " + locationValue;
     priceElement.textContent = "Price: " + priceValue;
+
+// UPI Payment button
+
+//     var placeUpiElement = document.getElementById('places');
+// var priceUpiElement = document.getElementById('prices');
+
+ // Retrieve location and price values from local storage
+ var storedData = JSON.parse(localStorage.getItem('payment'));
+    var locationValues = storedData ? storedData.Locations : 'Undefined';
+    var priceValues = storedData ? storedData.Price : 'Null';
+
+    // Update the content of the place and price elements
+    var placeUpiElement = document.querySelector('.places');
+    var priceUpiElement = document.querySelector('.prices');
+    placeUpiElement.textContent = "Place: " + locationValues;
+    priceUpiElement.textContent = "Price: " + priceValues;
   </script>
     </script>
   </body>
