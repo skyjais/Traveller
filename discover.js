@@ -91,7 +91,7 @@ function createCard(item) {
   cardBtn.addEventListener("click", function () {
     console.log(obj)
     localStorage.setItem("detail-data", JSON.stringify(obj))
-    window.location.href = "delhi.html"
+    window.location.href = "city.html"
   });
   divCityLogo.append(logoImg, cardLocation);
   divLeft.append(cardTitle)

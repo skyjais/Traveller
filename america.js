@@ -77,7 +77,7 @@ function createCard(item) {
     cardBtn.className = "card-btn";
     cardBtn.innerText = "Explore";
     cardBtn.addEventListener("click", function () {
-      window.location.href = "india.html";
+      window.location.href = "city.html";
     });
     divCityLogo.append(logoImg, cardLocation);
     divLeft.append(cardTitle)
