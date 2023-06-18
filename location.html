@@ -238,8 +238,8 @@ nav .right .right1 a:nth-child(1) {
 }
 
 p{
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
     padding-left: 5px;
     font-size: 17px;
 }
@@ -279,6 +279,77 @@ h2{
     grid-template-columns: repeat(3,1fr);
     margin-left: 35px;
 }
+
+
+
+/* search...................................... */
+
+.search{
+
+    width: 97%;
+   background-color: whitesmoke;
+    margin: auto;
+    height: 80px;
+    margin-top: 10px;
+
+}
+
+
+
+#searchInput{
+  margin-left: 2%;
+ 
+  height: 28px;
+  width: 250px;
+  border-radius: 5px;
+  transition: transform 0.5s ease;
+  font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+#searchInput:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+#searchButton{
+margin-left: 20px;
+height: 28px;
+border-radius: 5px;
+transition: transform 0.5s ease;
+font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#searchButton:hover{
+    transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.dosearch{
+    margin-top: 25px;
+}
+
+h1{
+    margin-top: 70px;
+}
+
+.dest{
+    margin-top: 13px;
+    font-size: 27px;
+    margin-left: 20%;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+/* search...................................... */
     </style>
 </head>
 <body>
@@ -307,6 +378,12 @@ h2{
             <ion-icon name="menu"></ion-icon>
           </div> -->
     </nav>
+    
+    <div class="search">
+        <button class="dest">Search Your Destination</button>
+        <input type="text" class="dosearch" id="searchInput" placeholder="Search">
+         <button class="dosearch" id="searchButton">Search</button>
+    </div>
 
     <div class="container">
         <div class="div1">
@@ -413,4 +490,27 @@ h2{
 
     </div>
 </body>
+
+<script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+  // Get the search keyword from the input field
+  var keyword = document.getElementById('searchInput').value.toLowerCase();
+
+  // Get all the div1 elements
+  var divs = document.getElementsByClassName('div1');
+
+  // Loop through each div and check if the title or description contains the keyword
+  for (var i = 0; i < divs.length; i++) {
+    var title = divs[i].querySelector('.title').innerText.toLowerCase();
+    var desc = divs[i].querySelector('.desc').innerText.toLowerCase();
+
+    // Show or hide the div based on the search result
+    if (title.includes(keyword) || desc.includes(keyword)) {
+      divs[i].style.display = 'block';
+    } else {
+      divs[i].style.display = 'none';
+    }
+  }
+});
+</script>
 </html>
