@@ -1,19 +1,27 @@
+// registration
+const regis = document.getElementById("registered");
+regis.addEventListener("click", () => {
+    window.location.href = "SignUp.html"
+})
+
+
 // switching to name
-var userList = JSON.parse(localStorage.getItem('user-list'));
+const signInData = JSON.parse(localStorage.getItem("user-list"));
 
-if (userList && userList.Name) {
-    var nameElement = document.createElement('h3');
-    nameElement.textContent = userList.Name.charAt(0);
-    nameElement.className = 'letter';
-
-    var admin = document.createElement('a');
-    admin.href = "#";
-    admin.innerHTML = `<ion-icon name="aperture"></ion-icon>`
-
-    var navRight = document.querySelector('.nav-right');
+if (signInData) {
+    const navRight = document.querySelector('.nav-right');
     if (navRight) {
-        navRight.insertBefore(nameElement, navRight.firstChild);
-        navRight.insertBefore(admin, navRight.firstChild);
+        const shortenedName = signInData.name.substring(0, 2).toUpperCase();
+        navRight.innerHTML = `
+        <div class="newNav-right">
+            <div>
+                 <h3 class="emails">${shortenedName}</h3>
+             </div>
+             <div>
+                 <a href="#" id="navnewIcon"><ion-icon name="settings-outline"></ion-icon></a>
+             </div>
+        </div>
+        `
     }
 }
 
@@ -167,6 +175,11 @@ function generatePlaces(places) {
             }
             imageDiv.append(imageDiv1, image);
 
+            imageDiv.addEventListener('click', () => {
+                redirectToPage(place);
+            });
+
+
             const contentDiv = document.createElement('div');
             contentDiv.classList.add('grid-ele-cont');
             const placeName = document.createElement('h3');
@@ -191,7 +204,7 @@ function generatePlaces(places) {
 
             contentDiv.append(placeName, rating, cityCountry, days);
             gridItem.append(imageDiv, contentDiv);
-            
+
         }
 
         gridContainer.appendChild(gridItem);
@@ -199,7 +212,25 @@ function generatePlaces(places) {
 
     updateRatings();
 }
+function redirectToPage(place) {
 
+    switch (place.placeName) {
+        case 'Scottland':
+            window.location.href = 'scottland.html';
+            break;
+        case 'India':
+            window.location.href = 'india.html';
+            break;
+        case 'Italy':
+            window.location.href = 'italy.html';
+            break;
+        case 'America':
+            window.location.href = 'america.html';
+            break;
+        default:
+            break;
+    }
+}
 
 generatePlaces(destinations);
 
