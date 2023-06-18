@@ -93,7 +93,7 @@
 
    <h1>Places to Explore !</h1>
 
-   <div id="places">
+   <!-- <div id="places">
 
        <div class="cards">
         <img src="./image/India-Gate-690x460.jpg" alt="">
@@ -148,23 +148,27 @@ Of course, you can also simply admire the unique architecture, the marble facade
             
             India’s history is so vastly different to the more commonly known western societies. The art, cultures, religions and belief systems that have thrived here are unique, complex and beautiful. Celebrate and learn about them here, where you can find a wealth of knowledge in all fields!</p>
        </div>
- </div>
+ </div> -->
 
 
   <div id="btns">
-    <a href="./index.html">
-        <button class="btn">Go Back</button>
-    </a>
-
-    <a href="">
-        <button class="btn">Book Now</button>
-    </a>
+        <button class="btn" id="go-back">Go Back</button>
+        <button class="btn" id="Button">Book Now</button>
   </div>
   
 </body>
 </html>
 <script>
+    let goBack = document.getElementById("go-back")
+    goBack.addEventListener("click",function(){
+        window.location.href = "/htmls/discover.html"
+    })
+    let bookNowButton = document.getElementById("Button")
+    bookNowButton.addEventListener("click",function(){
+        window.location.href = "/htmls/bookNow.html"
+    })
     let res = JSON.parse(localStorage.getItem("detail-data"))
+
     let container = document.getElementById("top");
     container.innerHTML = `
     <img src=${res.image}>

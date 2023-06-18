@@ -20,18 +20,18 @@ subscribeButton.addEventListener("click", () => {
 
 var placeName = document.querySelector('.place-name');
 
-var storedData = JSON.parse(localStorage.getItem('book-now'));
+var storedData = JSON.parse(localStorage.getItem('detail-data'));
 
 placeName.innerHTML = `
-    <img src= /${storedData.Image} alt="" class="place-image">
+    <img src= "${storedData.image.startsWith('https')?storedData.image:`/${storedData.image}`}" alt="" class="place-image">
 `
 
 
 var placeElement = document.getElementById('place');
 var priceElement = document.getElementById('price');
 
-placeElement.innerHTML = `Place:<span class='place-highlight'> <ion-icon name="location-outline"></ion-icon>  ` + storedData.Place + `, ` + storedData.Location + `</span>`;
-priceElement.innerHTML = "Price: <span class='price-highlight'>₹ " + storedData.Price + "/-</span>";
+placeElement.innerHTML = `Place:<span class='place-highlight'> <ion-icon name="location-outline"></ion-icon>  ` + storedData.city + `, ` + storedData.country + `</span>`;
+priceElement.innerHTML = "Price: <span class='price-highlight'>₹ " + storedData.price + "/-</span>";
 
 // form page
 var form = document.querySelector('.submit-btn');
@@ -55,9 +55,9 @@ form.addEventListener('click', function (e) {
         check_Out: checkOut,
         Adults: numOfAdults,
         Children: numOfChildren,
-        Place: storedData.Place,
-        Location: storedData.Location,
-        Price: storedData.Price
+        Place: storedData.country,
+        Location: storedData.city,
+        Price: storedData.price
     };
     console.log(payment);
     localStorage.setItem('payment', JSON.stringify(payment));

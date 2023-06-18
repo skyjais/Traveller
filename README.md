@@ -61,7 +61,7 @@ Clone the project
 ## Contributors
 
 - [Akash Jaiswal](https://github.com/skyjais)
-- [Pratibh ](https://github.com/pratibh98)
+- [Pratibh R Sharma ](https://github.com/pratibh98)
 - [Yash Vaishnav](https://github.com/yashuvaishnav)
 - [Diptajit Das]()
 - [Vasundhara Mishra](https://github.com/vasukimi)

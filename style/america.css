@@ -129,3 +129,76 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+
+/* Nav part  */
+nav {
+    margin: auto;
+    width: 97%;
+    height: 130px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(214, 197, 197);
+  }
+  
+  nav .left img {
+    width: 100%;
+    max-width: 200px;
+    margin-left: 100px;
+  }
+  
+  nav .right {
+      width: 60%;
+    /* display: flex;
+    justify-content: center; */
+    
+    
+    /* border: 2px solid red; */
+    align-items: flex-end;
+    font-size: large;
+    margin-right: 20px
+  }
+  .right1 {
+      display: flex;
+      /* justify-content: space-between; */
+      gap: 30px;
+      height: 40px;
+      padding-top: 5px;
+      
+      /* margin-left: 100px; */
+  }
+  
+  
+  nav .right .right1 a {
+    /* margin-right: 20px; */
+    
+    color: black;
+    /* text-align: center; */
+  
+   
+    /* border: 3px solid blue; */
+    text-decoration: none;
+    /* font-family: 'Darumadrop One', cursive; */
+    font-size: larger;
+    margin-right: 30px;
+    /* padding-bottom: 20px; */
+  }
+  
+  
+  
+  
+  nav .right .right1 a:hover {
+    border-bottom: 5px solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  nav .right .right1 a:nth-child(1) {
+    /* border-bottom: 5px solid black; */
+    /* font-weight: bold; */
+    font-size: larger;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }

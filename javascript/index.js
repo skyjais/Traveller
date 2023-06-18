@@ -1,7 +1,7 @@
 // registration
 const regis = document.getElementById("registered");
 regis.addEventListener("click", () => {
-    window.location.href = "SignUp.html"
+    window.location.href = "/htmls/SignUp.html"
 })
 
 
@@ -18,7 +18,7 @@ if (signInData) {
                  <h3 class="emails">${shortenedName}</h3>
              </div>
              <div>
-                 <a href="#" id="navnewIcon"><ion-icon name="settings-outline"></ion-icon></a>
+                 <a href="/htmls/https.html" id="navnewIcon"><ion-icon name="settings-outline"></ion-icon></a>
              </div>
         </div>
         `
@@ -284,15 +284,15 @@ bookNowButtons.forEach(function (button) {
         var price = Math.floor(Math.random() * 9000) + 1000;
 
         var bookingDetails = {
-            Image: image,
-            Place: place,
-            Location: location,
+            image: image,
+            country: place,
+            city: location,
             Packages: packages,
-            Price: price
+            price: price
         };
 
         console.log(bookingDetails);
-        localStorage.setItem('book-now', JSON.stringify(bookingDetails));
+        localStorage.setItem('detail-data', JSON.stringify(bookingDetails));
         window.location.href = "htmls/bookNow.html";
     });
 });
