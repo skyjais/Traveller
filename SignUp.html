@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SignUp.css" />
+    <script
+      src="https://kit.fontawesome.com/66dd96b05e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+      <div class="form-box">
+        <h1>Sign Up</h1>
+        <form action="">
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-user"></i>
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-phone"></i>
+              <input type="text" id="phoneNumber" placeholder="Phone No"  maxlength="10"/>
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" placeholder="Password" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                id="confirmpassword"
+                placeholder="Confirm Password"
+              />
+            </div>
+
+            <div class="btn-field">
+              <button type="button" id="btn1">Create Account</button>
+              <div class="login-link">
+                Already have an account? <a href="./login.html">Login</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    <!-- </div> -->
+
+
+  </body>
+  <script>
+
+// Catching the details
+    let emailid = document.getElementById("email");
+    let phoneNumber = document.getElementById("phoneNumber");
+    let password = document.getElementById("password");
+    let confirmPassword = document.getElementById("confirmpassword");
+
+    let myform = document.querySelector("form");
+    let userData = JSON.parse(localStorage.getItem("user-list")) || [];
+    let btn1 = document.getElementById("btn1");
+    btn1.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (password.value !== confirmPassword.value) {
+        alert("Passwords do not match!");
+        password.value = "";
+        confirmPassword.value = "";
+        return;
+      }
+
+      let obj = {
+        email: emailid.value,
+        phno: phoneNumber.value,
+        password: password.value,
+        cp: confirmPassword.value,
+      };
+
+      userData.push(obj);
+      localStorage.setItem("user-list", JSON.stringify(userData));
+
+      alert("Account Creation successful!");
+
+      // Optional: clear the form inputs after successful sign-up
+      emailid.value = "";
+      phoneNumber.value = "";
+      password.value = "";
+      confirmPassword.value = "";
+
+      window.location.href = "login.html";
+    });
+    
+
+  </script>
+</html>
