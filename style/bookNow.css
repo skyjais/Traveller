@@ -54,11 +54,11 @@ nav .right .right1 a:hover {
     box-shadow: 0 -5px 0px black inset, 500px 0 0 rgba(255, 255, 255, 0.03)inset;
 }
 
-nav .right .right1 a:nth-child(5) {
+/* nav .right .right1 a:nth-child(5) {
     font-weight: bold;
     font-size: larger;
     box-shadow: 0 -5px black inset, 500px 0 0 rgba(255, 255, 255, 0.03)inset;
-}
+} */
 
 
 nav .right2 .navigation {
