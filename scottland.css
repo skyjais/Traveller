@@ -80,7 +80,9 @@ body{
     align-items: center;
     height: 40px;
 }
-
+.card-btn{
+    cursor: pointer;
+}
 .card-body > .div-second{
     display: flex;
     justify-content: space-around;

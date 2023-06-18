@@ -76,7 +76,14 @@ function createCard(item) {
     let cardBtn = document.createElement("button");
     cardBtn.className = "card-btn";
     cardBtn.innerText = "Explore";
+    let obj = {
+      image: item.image,
+      country : item.title,
+      city : item.city,
+      price : item.price,
+    }
     cardBtn.addEventListener("click", function () {
+      localStorage.setItem("detail-data", JSON.stringify(obj))
       window.location.href = "city.html";
     });
     divCityLogo.append(logoImg, cardLocation);
