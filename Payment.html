@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+	<!-- POP Up -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="payment.css" />
+    <title>Payment Gateway</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Credit Payment</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Card Holder Name" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Card Number" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="date" placeholder="Exp Date" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="CVV" />
+            </div>
+            <div>
+              <h2 class="place">Place: Undefined</h2>
+              <h3 class="price">Price: Null</h3>
+            </div>
+            <input type="submit" value="pay Now" class="btn solid" />
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">UPI Payment</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="UPI ID" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="text" placeholder="Phone Number" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="OTP" />
+            </div>
+            <div>
+              <h2 class="places">Place: Undefined</h2>
+              <h3 class="prices">Price: Null</h3>
+            </div>
+            <input type="submit" id="UPIbtn" class="btn" value="Pay Now" />
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Travel is the only thing you buy that makes you richer. Remember that happiness is a way of travel, not a destination.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              UPI Payment
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              The journey of a thousand miles begins with a single step.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">Credit Payment</button>
+          </div>
+          <img
+            src="https://cdn.dribbble.com/users/1976094/screenshots/4687414/buss_trvl.gif"
+            class="image" id="img2"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+      const sign_up_btn = document.querySelector("#sign-up-btn");
+      const container = document.querySelector(".container");
+
+      const upibtn=document.getElementById("UPIbtn");
+
+      sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+      });
+
+      sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+      });
+
+      // pop up-
+
+       const submitbtn = document.querySelector(".btn");
+	   const submitbtn1 = document.querySelector("#btn2")
+
+      submitbtn.addEventListener("click", () => {
+        // const email = subEmail.value.trim();
+
+        // if (email !== "") {
+          swal(
+            "Good job!",
+            `Payment Successfull `,
+            "success"
+          ).then(() => {
+            subEmail.value = "";
+          });
+        // } else {
+        //   swal("Error", "Enter the Email", "error");
+        // }
+      });
+	  
+      UPIbtn.addEventListener("click",()=>{
+        swal(
+            "Good job!",
+            `Payment Successfull `,
+            "success"
+          ).then(() => {
+            subEmail.value = "";
+          });
+      })
+    //   submitbtn1.addEventListener("click", () => {
+    //     // const email = subEmail.value.trim();
+
+    //     // if (email !== "") {
+    //       swal(
+    //         "Good job!",
+    //         `Payment Successfull `,
+    //         "success"
+    //       ).then(() => {
+    //         subEmail.value = "";
+    //       });
+    //     // } else {
+    //     //   swal("Error", "Enter the Email", "error");
+    //     // }
+    //   });
+
+// 	var placeName = document.querySelector('.place');
+
+// var storedData = JSON.parse(localStorage.getItem('payment'));
+
+// placeName.textContent = "waka"
+
+
+var placeElement = document.getElementById('place');
+var priceElement = document.getElementById('price');
+
+ // Retrieve location and price values from local storage
+ var storedData = JSON.parse(localStorage.getItem('payment'));
+    var locationValue = storedData ? storedData.Locations : 'Undefined';
+    var priceValue = storedData ? storedData.Price : 'Null';
+
+    // Update the content of the place and price elements
+    var placeElement = document.querySelector('.place');
+    var priceElement = document.querySelector('.price');
+    placeElement.textContent = "Place: " + locationValue;
+    priceElement.textContent = "Price: " + priceValue;
+
+// UPI Payment button
+
+//     var placeUpiElement = document.getElementById('places');
+// var priceUpiElement = document.getElementById('prices');
+
+ // Retrieve location and price values from local storage
+ var storedData = JSON.parse(localStorage.getItem('payment'));
+    var locationValues = storedData ? storedData.Locations : 'Undefined';
+    var priceValues = storedData ? storedData.Price : 'Null';
+
+    // Update the content of the place and price elements
+    var placeUpiElement = document.querySelector('.places');
+    var priceUpiElement = document.querySelector('.prices');
+    placeUpiElement.textContent = "Place: " + locationValues;
+    priceUpiElement.textContent = "Price: " + priceValues;
+  </script>
+    </script>
+  </body>
+</html>
+
+
+<!-- Local storage  -->
+<!-- booknow -->
+<!-- Price -->
+<!-- Locations -->
