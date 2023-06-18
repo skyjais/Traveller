@@ -114,6 +114,9 @@ body {
     color: gray;
     font-weight: bolder;
 }
+#count-destination{
+    text-align: center;
+}
 
 /* Pagination Css */
 

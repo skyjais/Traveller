@@ -182,17 +182,11 @@ function displayData(data) {
 const searchInput = document.querySelector(".searchLogo input");
 const searchButton = document.querySelector("#search-button");
 
-searchButton.addEventListener("click", () => {
-  const searching = searchInput.value.trim().toLowerCase();
-  const filterdata = AllData.filter((el) => {
-    return el.title.toLowerCase().includes(searching);
-  });
-  displayData(filterdata);
-});
+
 searchInput.addEventListener("input", () => {
   const searching = searchInput.value.trim().toLowerCase();
   const filterdata = AllData.filter((el) => {
-    return el.city.toLowerCase().includes(searching);
+    return el.city.toLowerCase().includes(searching) || el.title.toLowerCase().includes(searching);
   });
   displayData(filterdata);
 });
@@ -225,3 +219,17 @@ function LoadAnimation() {
     "https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif";
   container.append(img);
 }
+
+// Total data count
+let totalDataCount = document.getElementById("count-destination");
+async function total(){
+  try {
+    let res = await fetch("https://traveller-63nk.onrender.com/products")
+    let data = await res.json();
+    totalDataCount.innerHTML = `Total Destination : ${data.length}`
+    console.log(data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+total()
