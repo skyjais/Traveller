@@ -9,7 +9,7 @@ Traveller is a website for a travel agency. The website contains details about t
 
 # Deployed Link
 
-[Netlify Deployed Link:  Traveller](https://sarthitravel.netlify.app/)
+[Netlify Deployed Link:  Traveller](https://648ff05711e1f629dd64fb2c--visionary-centaur-d4c88a.netlify.app/index.html)
 ## Objectives
 The main objective of the project is to create a picture perfect travel website with basic functionality.
 ## Tech Stack
